@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend | Profile Card</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <article data-testid="test-profile-card" class="profile-card">
+        <figure class="avatar-wrapper">
+          <img
+            src="assets/avatar.png"
+            alt="Pic"
+            data-testid="test-user-avatar"
+            id="user-avatar"
+          />
+          <div class="upload-overlay">
+            <label for="avatar-upload" class="upload-btn">📷</label>
+            <input
+              type="file"
+              id="avatar-upload"
+              accept="image/*"
+              data-testid="test-avatar-upload"
+            />
+          </div>
+        </figure>
+
+        <div class="profile-content">
+          <header>
+            <h2 data-testid="test-user-name">Francis Dim</h2>
+          </header>
+
+          <p data-testid="test-user-bio" class="bio">
+            Passionate full-stack developer focused on building performant,
+            scalable, and visually engaging digital experiences. Building modern
+            websites & apps for businesses & entrepreneurs Turning ideas into
+            digital products.
+          </p>
+
+          <div class="meta">
+            <p>
+              Current Time (ms):
+              <span data-testid="test-user-time" id="user-time"></span>
+            </p>
+          </div>
+
+          <nav aria-label="Social Links">
+            <ul data-testid="test-user-social-links" class="social-links">
+              <li>
+                <a
+                  href="https://francisdim-dev.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-website"
+                  >Website</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://x.com/FrancisKosisoc1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-twitter"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Francis6-git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-github"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/francis-dim-398258293"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-linkedin"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <section>
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Coding</li>
+              <li>Football</li>
+              <li>Reading Tech Articles</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Slow Internet</li>
+              <li>Unoptimized Code</li>
+              <li>Bad UI Design</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
