@@ -1,0 +1,28 @@
+.about-container {
+  max-width: 850px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+}
+.about-container section {
+  margin-bottom: 2rem;
+  background: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+h2 {
+  color: #065f46;
+  margin-bottom: 0.5rem;
+}
+p,
+li {
+  line-height: 1.6;
+}
+ul {
+  list-style: disc inside;
+}
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+  }
+}

@@ -5,7 +5,7 @@
   --bg: #0f172a;
   --card-bg: rgba(30, 41, 59, 0.65);
   --text: #f8fafc;
-  --subtext: #cbd5e1;
+  --subtext: #60676e;
   --accent: #3b82f6;
   --radius: 1.2rem;
   --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
@@ -22,19 +22,17 @@
 
 body {
   font-family: "Inter", system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   line-height: 1.6;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 h2,
 h3 {
   font-weight: 600;
+  color: #065f46;
 }
 
 ul {
@@ -46,7 +44,6 @@ ul {
    Profile Card Layout
 -------------------- */
 .profile-card {
-  background: var(--card-bg);
   backdrop-filter: blur(var(--blur));
   border: var(--glass-border);
   border-radius: var(--radius);
@@ -57,6 +54,7 @@ ul {
   max-width: 850px;
   width: 100%;
   padding: 2rem;
+  margin: 2rem auto;
   align-items: start;
   transition: transform var(--transition);
 }
@@ -166,7 +164,7 @@ section h3 {
 }
 
 section ul li {
-  color: var(--text);
+  color: var(--subtext);
   background: rgba(0, 0, 0, 0.05);
   margin-bottom: 0.3rem;
   padding: 0.3rem 0.7rem;
@@ -198,5 +196,63 @@ section ul li {
 
   .profile-content {
     align-items: center;
+  }
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 90vw;
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-brand {
+  font-weight: 700;
+  font-size: large;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--accent);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
   }
 }
